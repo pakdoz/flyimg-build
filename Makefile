@@ -18,5 +18,6 @@ push: build
 	$(eval VERSION=$(shell sh -c "cd $(APP_FOLDER) && git describe --abbrev=0 --tags"))
 	docker tag $(IMAGE_NAME):$(VERSION) $(IMAGE_PATH):$(VERSION)
 	docker push $(IMAGE_PATH):$(VERSION)
+	docker push $(IMAGE_PATH)
 	@echo "PUSHED ${IMAGE_PATH}:$(VERSION)"
 	rm -rf $(APP_FOLDER)
