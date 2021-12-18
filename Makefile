@@ -1,11 +1,11 @@
-REGISTRY    = https://github.com/flyimg/flyimg.git
+REGISTRY    = https://github.com/pakdoz/flyimg.git
 APP_PATH    = `pwd`
 
 .PHONY: build push
 
 APP_FOLDER  = app-folder
-IMAGE_NAME  = flyimg-build
-IMAGE_PATH  = flyimg/$(IMAGE_NAME)
+IMAGE_NAME  = flyimg-build-arm
+IMAGE_PATH  = preketek/$(IMAGE_NAME)
 
 build:
 	rm -rf $(APP_FOLDER)
